@@ -20,15 +20,15 @@ end() // 返回链式调用里的前一个wQuery对象
 each(fn) //遍历元素并用fn操作每个元素
 parent() // 寻找元素的父元素
 children() // 寻找元素的子元素
-get(index) // 获取元素
-appendTo(node) // 添加元素
+,appendTo(node) // 添加元素
 remove() // 删除元素
 print() // 打印元素
+on(event, fn) // 事件监听
 ```
 
 ## 原型链
 
-如果每次生成的wQuery实例里的方法都一样, 但还是重新开辟内存空间去容纳两个**"一样"**的对象. 这会显得很愚蠢. 原型链也是为了解决这个问题而产生的. wQuery将实例所用到的函数放在`wQuery.prototype`上, 每个实例只需保存一个对`wQuery.prototype`的引用即可节省很大的内存.
+如果每次生成的wQuery实例里的方法都一样, 但还是重新开辟内存空间去容纳两个**一样**的对象. 这会显得很愚蠢. 原型链也是为了解决这个问题而产生的. wQuery将实例所用到的函数放在`wQuery.prototype`上, 每个实例只需保存一个对`wQuery.prototype`的引用即可节省很大的内存.
 
 ## TEST
 

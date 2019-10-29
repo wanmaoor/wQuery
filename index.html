@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>wQuery</title>
-</head>
-<body>
-  <div class="test">
-    test1
-    <div class="child">child1</div>
-    <div class="child">child2</div>
-    <div class="child">child3</div>
-  </div>
-  <div class="test">
-    test2
-    <div class="child">child1</div>
-    <div class="child">child2</div>
-  </div>
-  <div class="test">
-    test3
-    <div class="child">child3x</div>
-  </div>
-  <div id="container">
-    container
-    <div id="container1">
-      container1
-      <div id="container2">
-        container2
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TEST - wQuery</title>
+    <link rel="stylesheet" href="./test.css" />
+  </head>
+  <body>
+    <div class="test">1</div>
+    <div class="test">2</div>
+    <div class="test">3</div>
+    <button>变红</button>
+    <hr />
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child">child3</div>
     </div>
-  </div>
-  <script src="./wQuery.js"></script>
-  <script src="./index.js"></script>
-</body>
+    <div class="parent">
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+      <div class="child">child6</div>
+    </div>
+    <div class="child">child7(outside)</div>
+    <hr>
+    <div class="remove">2秒后我会消失</div>
+    <hr>
+    <div class="append">append1</div>
+    <div class="append">append2</div>
+    <div class="append">append3</div>
+    <script src="./wQuery.js"></script>
+    <script src="./index.js"></script>
+  </body>
 </html>

@@ -1,20 +1,29 @@
 // @ts-nocheck
-  $(".test")
+$("button").on("click", () => {
+  $(".test").addClass("red");
+});
+
+$(".child")
+  .parent()
+  .print("测试parent api");
+
+$(".parent")
+  .children()
+  .print("测试children api");
+
+setTimeout(() => {
+  $(".parent")
     .find(".child")
-    .addClass("red")
+    .addClass("green");
+  $(".parent")
+    .find(".child")
     .end()
-    .addClass('yellow')
-    .print()
+    .addClass("blue");
+  $(".remove").remove();
+  $(`<div>我要添加在append1的尾巴</div>`).appendTo($(".append"));
+  $(`<div>我是append2的尾巴</div>`).appendTo($(".append"), 1);
+}, 2000);
 
-
-$('.test').each((element, i)=>{console.log(`${i}: ${element}`);})
-$('.test').parent().print()
-$('.test').children().print()
-
-let $div = $(`<div>1<span>2</span></div>`)
-$div.print()
-$div.appendTo(document.body)
-
-$('.child').appendTo($('#container'))
-
-$('#container').find('#container1').find('#container2').end().addClass('xxx')
+setTimeout(() => {
+  $(`<div>我要添加在body的尾巴</div>`).appendTo(document.body);
+}, 3000);
