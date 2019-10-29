@@ -83,6 +83,18 @@ window.wQuery.prototype = {
         node.get(i).appendChild(element);
       });
     }
+  },
+  attr(name, value) {
+    if (arguments.length === 2) {
+      this.each(el => {
+        el.setAttribute(name, value);
+      });
+    } else if (arguments.length === 1) {
+      this.each(el => {
+        return el.getAttribute(name);
+      });
+    }
+    return this
   }
 };
 window.$ = window.wQuery;

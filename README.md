@@ -20,10 +20,11 @@ end() // 返回链式调用里的前一个wQuery对象
 each(fn) //遍历元素并用fn操作每个元素
 parent() // 寻找元素的父元素
 children() // 寻找元素的子元素
-,appendTo(node) // 添加元素
+appendTo(node) // 添加元素
 remove() // 删除元素
 print() // 打印元素
 on(event, fn) // 事件监听
+attr(name, value) // 给元素设置属性
 ```
 
 ## 原型链
