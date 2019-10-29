@@ -90,9 +90,11 @@ window.wQuery.prototype = {
         el.setAttribute(name, value);
       });
     } else if (arguments.length === 1) {
+      let array = []
       this.each(el => {
-        return el.getAttribute(name);
+        array.push(el.getAttribute(name));
       });
+      return array
     }
     return this
   }

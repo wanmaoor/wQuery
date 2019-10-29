@@ -14,7 +14,7 @@ $(".parent")
 $('.parent')
   .attr('xxx', 'wanmao')
 
-const xxx = $('parent').attr('xxx')
+const xxx = $('.parent').attr('xxx')
 console.log('xxx', xxx);
 setTimeout(() => {
   $(".parent")
